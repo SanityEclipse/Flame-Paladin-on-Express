@@ -18,8 +18,7 @@ Game.Preloader.prototype = {
         this.load.image('tileset', 'maps/MapTemplate.png');
 
         this.load.image('background1', 'images/background.jpg');
-        this.load.image('background2', 'images/background_image_Menu.jpg');
-        this.load.image('button', 'images/Hero-front.png');
+        this.load.image('background2', 'images/background_image_menu.jpg');
 
 
         this.load.spritesheet('player', 'images/player1.png', 26, 26);
