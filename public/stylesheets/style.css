@@ -3,3 +3,8 @@ body {
     background-color: black;
     color: red;
 }
+canvas {
+margin-left: 125px;
+margin-top: 40px;
+border: 1px solid red; 
+}

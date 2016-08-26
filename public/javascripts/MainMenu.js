@@ -16,8 +16,8 @@ Game.MainMenu.prototype = {
 
 
 
-        text20 = game.add.text(game.world.centerX - 115, game.world.centerY - 75, "PLAY", {
-            font: "25px Arial",
+        text20 = game.add.text(game.world.centerX - 45, game.world.centerY - 35, "PLAY", {
+            font: "35px Arial",
             fill: "#ff0044",
             align: "center"
         });
@@ -53,20 +53,17 @@ Game.MainMenu.prototype = {
         backgroundMusic.loop = true;
         backgroundMusic.play();
 
-        button = game.add.button(game.world.centerX - 50, 125, 'button', actionOnClick, this, 2, 1, 0);
-        game.add.sprite(200, 175, 'fireball');
-        game.add.sprite(310, 175, 'fireball');
-        game.add.sprite(255, 95, 'fireball');
-        game.add.sprite(255, 225, 'fireball');
+
+
+        game.add.sprite(200, 170, 'fireball');
+        game.add.sprite(310, 170, 'fireball');
+        // game.add.sprite(255, 95, 'fireball');
+        // game.add.sprite(255, 225, 'fireball');
 
 
 
 
-        function actionOnClick() {
 
-            backgroundMusic.mute = true;
-            this.state.start('Level1');
-        }
 
 
 
@@ -74,7 +71,10 @@ Game.MainMenu.prototype = {
 
     update: function(game) {
 
-
+        if (game.input.activePointer.isDown) {
+            backgroundMusic.mute = true;
+            this.state.start('Level1');
+        }
     },
 
 

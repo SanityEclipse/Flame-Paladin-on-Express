@@ -343,11 +343,11 @@ Game.Level1.prototype = {
                 if (facing == 'right') {
                     fireball.body.velocity.y = -200;
 
-                    fireball.body.velocity.x = 200;
+                    fireball.body.velocity.x = 300;
 
                 } else {
                     fireball.body.velocity.y = -200;
-                    fireball.body.velocity.x = -200;
+                    fireball.body.velocity.x = -300;
                 }
             }
         }
