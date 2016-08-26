@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <title>The Last Flame Paladin</title>
+    <script src="javascripts/phaser.js"></script>
+    <script src="javascripts/boot.js"></script>
+    <script src="javascripts/Preloader.js"></script>
+    <script src="javascripts/MainMenu.js"></script>
+    <script src="javascripts/Level1.js"></script>
+    <script src="javascripts/Level2.js"></script>
+    <script src="javascripts/Level3.js"></script>
+    <script src="javascripts/GameOver.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="javascripts/API.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  </head>
+  <body>
+    {{{body}}}
+    <script type="text/javascript">
+       window.onload = function() {
+           var game = new Phaser.Game(550, 400, Phaser.CANVAS, '');
+           game.state.add('Boot', Game.Boot);
+           game.state.add('Preloader', Game.Preloader);
+           game.state.add('MainMenu', Game.MainMenu);
+           game.state.add('Level1', Game.Level1);
+           game.state.add('Level2', Game.Level2);
+           game.state.add('Level3', Game.Level3);
+           game.state.add('GameOver', Game.GameOver);
+           game.state.start('Boot');
+       }
+   </script>
+  </body>
+</html>
